@@ -3,6 +3,7 @@ defmodule Flea.CoGDefuzzification do
 		
 		memfuncsmods = Dict.values(memfuncs) |> Enum.map(fn mf -> { mf.__struct__, mf } end)
 		
+        #mod = module that has the membership function fuzzify
 		minX = memfuncsmods |> Enum.map(fn {mod, f} -> mod.min(f) end) |> Enum.min
 		maxX = memfuncsmods |> Enum.map(fn {mod, f} -> mod.max(f) end) |> Enum.max
 		

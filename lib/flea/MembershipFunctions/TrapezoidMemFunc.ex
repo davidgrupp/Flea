@@ -1,8 +1,8 @@
 defmodule Flea.TrapezoidMemFunc do
 	defstruct a: 0, b: 0, c: 0, d: 0 
 	
-	def fuzzify(input_value, params) do
-		_fuzzify(input_value, params.a, params.b, params.c, params.d)
+	def fuzzify(input_value, %Flea.TrapezoidMemFunc{a: a, b: b, c: c, d: d}) do
+		_fuzzify(input_value, a, b, c, d)
 	end
 	
 	def _fuzzify(input_value, a, b, _c, _d) when a <= input_value and input_value < b do
@@ -19,7 +19,7 @@ defmodule Flea.TrapezoidMemFunc do
 	
 	def _fuzzify(_input_value, _a, _b, _c, _d), do: 0
 	
-	def min(params), do: params.a
+	def min(%{a: a}), do: a
 	
-	def max(params), do: params.d
+	def max(%{d: d}), do: d
 end
