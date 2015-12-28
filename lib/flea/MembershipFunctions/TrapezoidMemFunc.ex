@@ -2,7 +2,7 @@ defmodule Flea.TrapezoidMemFunc do
 	defstruct a: 0, b: 0, c: 0, d: 0 
 	
 	def fuzzify(input_value, %Flea.TrapezoidMemFunc{a: a, b: b, c: c, d: d}) do
-		_fuzzify(input_value, a, b, c, d)
+        _fuzzify(input_value, a, b, c, d)
 	end
 	
 	def _fuzzify(input_value, a, b, _c, _d) when a <= input_value and input_value < b do
