@@ -9,4 +9,5 @@ defmodule Flea.Variable do
      memfuncs = Dict.put(var.memfuncs, name, memfunc)
      Map.put(var, :memfuncs, memfuncs )
   end
+  
 end

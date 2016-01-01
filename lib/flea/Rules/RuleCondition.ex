@@ -1,3 +1,3 @@
-defmodule Flea.RuleConjunction do
-    defstruct conjunction: nil, first_clause: nil, second_clause: nil
+defmodule Flea.RuleCondition do
+    defstruct conjunction: nil, clause: nil
 end
